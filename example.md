@@ -39,12 +39,12 @@ Hover on the bottom-left corner to see the navigation's controls panel
 
 ## Keyboard Shortcuts
 
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+|                                                      |                             |
+| ---------------------------------------------------- | --------------------------- |
+| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide     |
+| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd>   | previous animation or slide |
+| <kbd>up</kbd>                                        | previous slide              |
+| <kbd>down</kbd>                                      | next slide                  |
 
 ---
 layout: image-right
@@ -57,17 +57,37 @@ Use code snippets and get the highlighting directly!
 
 ```ts
 interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
+  id: number;
+  firstName: string;
+  lastName: string;
+  role: string;
 }
 
 function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
+  const user = getUser(id);
+  const newUser = { ...user, ...update };
+  saveUser(id, newUser);
 }
+```
+
+---
+layout: image-right
+image: https://cover.sli.dev
+---
+
+# Code - TwoSlash
+
+Use code snippets and get the highlighting directly!
+
+```ts twoslash
+interface User {
+  id?: number;
+  firstName?: string;
+  lastName?: string;
+  role?: string;
+}
+
+const user: User = {};
 ```
 
 ---
