@@ -3,10 +3,25 @@
   /* can be overrided by uses `themeConfig` option */
   --slidev-theme-primary: #3b82f6;
   --workshops-blue-gradient: linear-gradient(120deg, #3023ae, #0a50c2, #4286f4);
+
+  /* section layout shared surfaces */
+  --section-surface-bg: #f6f8ff;
+  --section-panel-bg: rgba(255, 255, 255, 0.88);
+  --section-text-color: #0f172a;
+  --section-border-color: rgba(66, 134, 244, 0.25);
+  --section-glow-color: rgba(66, 134, 244, 0.12);
+}
+
+html.dark {
+  --section-surface-bg: #040815;
+  --section-panel-bg: rgba(3, 7, 20, 0.78);
+  --section-text-color: #f8fafc;
+  --section-border-color: rgba(66, 134, 244, 0.4);
+  --section-glow-color: rgba(66, 134, 244, 0.35);
 }
 
 .slidev-layout {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .slidev-layout.cover,

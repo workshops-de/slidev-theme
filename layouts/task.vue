@@ -16,11 +16,11 @@
     <div class="task-content">
       <slot />
     </div>
+    <SlideFooter />
   </div>
-  <SlideFooter />
 </template>
 
-<style scoped>
+<style>
 .task {
   display: flex;
   align-items: center;

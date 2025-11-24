@@ -49,6 +49,12 @@ Hover on the bottom-left corner to see the navigation's controls panel
 | <kbd>down</kbd>                                      | next slide                  |
 
 ---
+layout: section
+---
+
+# Code Snippets
+
+---
 layout: image-right
 image: https://cover.sli.dev
 ---
@@ -330,6 +336,12 @@ export class MyModule {
 </article>
 ```
 </WindowMockup>
+
+---
+layout: section
+---
+
+# Tasks
 
 ---
 layout: task

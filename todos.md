@@ -14,4 +14,4 @@
 - [] Lessons learned
 - [] Disclaimer
 - [] Offering
-- [] Task
+- [x] Task
