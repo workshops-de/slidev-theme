@@ -277,37 +277,6 @@ export class MyModule {
 
 ::bottom::
 
-Important note on the button.
-
----
-layout: two-cols-header
-layoutClass: gap-x-sm
----
-
-# Two code snippets next to each other
-
-::left::
-
-<WindowMockup title="TypeScript" codeblock>
-```typescript
-export class MyModule {
-  myState: unknown
-}
-```
-</WindowMockup>
-
-::right::
-
-<WindowMockup title="HTML" codeblock>
-```html
-<article>
-  <h2>Hello, there</h2>
-</article>
-```
-</WindowMockup>
-
-::bottom::
-
 🔥 Important note on the button.
 
 ---
