@@ -1,5 +1,7 @@
 ---
 theme: ./
+addons:
+  - window-mockup
 ---
 
 # Slidev Theme Starter
@@ -98,3 +100,239 @@ class: "text-center"
 # Learn More
 
 [Documentation](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+
+---
+layout: default
+layoutClass: gap-x-sm
+---
+
+# Code
+
+<WindowMockup title="code-file.ending" codeblock>
+```typescript
+export class MyModule {
+  myState: unknown
+}
+```
+</WindowMockup>
+
+---
+layout: default
+layoutClass: gap-x-sm
+---
+
+# Code line numbers
+
+<WindowMockup title="code-file.ending" codeblock>
+```typescript{*}{lines:true}
+export class MyModule {
+  myState: unknown
+}
+```
+</WindowMockup>
+
+---
+layout: default
+layoutClass: gap-x-sm
+---
+
+## Highlight single line
+
+<WindowMockup title="code-file.ending" codeblock>
+```typescript{2}{lines:true}
+export class MyModule {
+  myState: unknown
+}
+```
+</WindowMockup>
+
+## Highlight multiple lines
+
+<WindowMockup title="code-file.ending" codeblock>
+```typescript{2,3}{lines:true}
+export class MyModule {
+  myState: unknown
+  method(): void {}
+}
+```
+</WindowMockup>
+
+## Navigate through lines
+
+<WindowMockup title="code-file.ending" codeblock>
+```typescript{1|2|3|4}{lines:true}
+export class MyModule {
+  myState: unknown
+  method(): void {}
+}
+```
+</WindowMockup>
+
+---
+layout: default
+layoutClass: gap-x-sm
+---
+
+# Code - Magic Move
+
+<WindowMockup codeblock>
+
+````md magic-move
+```ts
+console.log("Hello, World!");
+```
+
+```js
+console.log("Hello, World!");
+console.log(`Step ${1}`);
+```
+
+```js
+console.log("Hello, World!");
+console.log(`Step ${1 + 1}`);
+```
+
+```ts
+console.log("Hello, World!");
+console.log(`Step ${3}` as string);
+```
+````
+
+</WindowMockup>
+
+---
+layout: two-cols-header
+layoutClass: gap-x-sm
+---
+
+# Code on the `right`
+
+::left::
+
+- Explain important facts
+
+::right::
+
+<WindowMockup title="code-file.ending" codeblock>
+```typescript
+export class MyModule {
+  myState: unknown
+}
+```
+</WindowMockup>
+
+---
+layout: two-cols-header
+layoutClass: gap-x-sm
+---
+
+# Code on the `left`
+
+::left::
+
+<WindowMockup title="code-file.ending" codeblock>
+```typescript
+export class MyModule {
+  myState: unknown
+}
+```
+</WindowMockup>
+
+::right::
+
+- Explain important facts
+
+---
+layout: two-cols-header
+layoutClass: gap-x-sm
+---
+
+# Two code snippets next to each other
+
+::left::
+
+<WindowMockup title="TypeScript" codeblock>
+```typescript
+export class MyModule {
+  myState: unknown
+}
+```
+</WindowMockup>
+
+::right::
+
+<WindowMockup title="HTML" codeblock>
+```html
+<article>
+  <h2>Hello, there</h2>
+</article>
+```
+</WindowMockup>
+
+::bottom::
+
+Important note on the button.
+
+---
+layout: two-cols-header
+layoutClass: gap-x-sm
+---
+
+# Two code snippets next to each other
+
+::left::
+
+<WindowMockup title="TypeScript" codeblock>
+```typescript
+export class MyModule {
+  myState: unknown
+}
+```
+</WindowMockup>
+
+::right::
+
+<WindowMockup title="HTML" codeblock>
+```html
+<article>
+  <h2>Hello, there</h2>
+</article>
+```
+</WindowMockup>
+
+::bottom::
+
+🔥 Important note on the button.
+
+---
+layout: two-cols-header
+layoutClass: gap-x-sm
+---
+
+# Window `color`-theme
+
+::left::
+
+<WindowMockup title="TypeScript" codeblock>
+```typescript
+export class MyModule {
+  myState: unknown
+}
+```
+</WindowMockup>
+
+::right::
+
+<WindowMockup title="HTML" color="light" codeblock>
+```html
+<article>
+  <h2>Hello, there</h2>
+</article>
+```
+</WindowMockup>
+
+---
+layout: task
+---
+
+# Create the first app

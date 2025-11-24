@@ -6,10 +6,10 @@
 - [x] Intro
 - [x] Image Left
 - [x] Image Right
-- [] Code Center
-- [] Code Left
-- [] Code Right
-- [] Code two-col
+- [x] Code Center
+- [x] Code Left
+- [x] Code Right
+- [x] Code two-col
 - [] What if?
 - [] Lessons learned
 - [] Disclaimer

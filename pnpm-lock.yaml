@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      slidev-addon-window-mockup:
+        specifier: 0.3.0
+        version: 0.3.0(typescript@5.9.3)
     devDependencies:
       '@slidev/cli':
         specifier: 52.9.1
@@ -20,9 +24,6 @@ importers:
       prettier-plugin-slidev:
         specifier: 1.0.5
         version: 1.0.5(prettier@3.6.2)
-      slidev-addon-window-mockup:
-        specifier: 0.3.0
-        version: 0.3.0(typescript@5.9.3)
 
 packages:
 

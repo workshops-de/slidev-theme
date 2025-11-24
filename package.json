@@ -16,12 +16,14 @@
     "export": "slidev export example.md",
     "screenshot": "slidev export example.md --format png"
   },
+  "dependencies": {
+    "slidev-addon-window-mockup": "0.3.0"
+  },
   "devDependencies": {
     "@slidev/cli": "52.9.1",
     "@slidev/types": "52.9.1",
     "prettier": "3.6.2",
-    "prettier-plugin-slidev": "1.0.5",
-    "slidev-addon-window-mockup": "0.3.0"
+    "prettier-plugin-slidev": "1.0.5"
   },
   "//": "Learn more: https://sli.dev/guide/write-theme.html",
   "slidev": {
