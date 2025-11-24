@@ -25,7 +25,6 @@ html.dark {
 }
 
 .slidev-layout.cover,
-.slidev-layout.intro,
 .slidev-layout.section {
   @apply h-full;
 
@@ -48,8 +47,7 @@ html.dark {
   }
 }
 
-.slidev-layout.cover,
-.slidev-layout.intro {
+.slidev-layout.cover {
   @apply h-full grid;
 
   h1 {
