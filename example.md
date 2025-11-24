@@ -57,7 +57,7 @@ layout: image-right
 image: https://cover.sli.dev
 ---
 
-# Code
+# Code with image
 
 Use code snippets and get the highlighting directly!
 
@@ -75,35 +75,6 @@ function updateUser(id: number, update: Partial<User>) {
   saveUser(id, newUser);
 }
 ```
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code - TwoSlash
-
-Use code snippets and get the highlighting directly!
-
-```ts twoslash
-interface User {
-  id?: number;
-  firstName?: string;
-  lastName?: string;
-  role?: string;
-}
-
-const user: User = {};
-```
-
----
-layout: center
-class: "text-center"
----
-
-# Learn More
-
-[Documentation](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
 
 ---
 layout: default
@@ -348,3 +319,12 @@ layout: task
 ---
 
 # Create the first app
+
+---
+layout: center
+class: "text-center"
+---
+
+# Learn More
+
+[Documentation](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)

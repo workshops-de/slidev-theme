@@ -49,7 +49,6 @@
         </div>
       </div>
     </div>
-    <SlideFooter />
   </div>
 </template>
 
@@ -58,11 +57,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: clamp(2.5rem, 5vw, 4.5rem);
   background: var(--section-surface-bg);
-  color: var(--section-text-color);
-  position: relative;
-  overflow: hidden;
 }
 
 .task-backdrop {
@@ -124,18 +119,10 @@
 .task-surface {
   position: relative;
   z-index: 1;
-  flex: 1 1 auto;
   display: grid;
-  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: 1fr;
   align-items: center;
-  padding: clamp(2.5rem, 6vw, 4.5rem);
-  border-radius: 2.25rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
-  border: 1px solid var(--section-border-color);
-  box-shadow:
-    0 25px 65px rgba(15, 23, 42, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  text-align: center;
 }
 
 .task-surface::after {
@@ -211,15 +198,20 @@
 .task-body {
   position: relative;
   z-index: 1;
-  text-align: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .task-body ::slotted(h1),
 .task-body h1 {
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
   margin: 0;
   color: inherit;
 }
@@ -241,7 +233,7 @@
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   font-weight: 600;
-  margin-top: 1.5rem;
+  margin: 1.5rem auto 0;
 }
 
 .badge-dot {
@@ -252,30 +244,38 @@
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.9);
 }
 
-@media (max-width: 960px) {
+@media (min-width: 640px) {
+  .slidev-layout.task {
+    padding: clamp(2rem, 5vw, 4rem);
+  }
+
   .task-surface {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .task-body {
-    text-align: center;
-  }
-
-  .task-badge {
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 2rem;
+    padding: clamp(2.25rem, 5vw, 3.25rem);
   }
 }
 
-@media (max-width: 640px) {
+@media (min-width: 960px) {
   .slidev-layout.task {
-    padding: 2rem;
+    padding: clamp(2.5rem, 5vw, 4.5rem);
   }
 
   .task-surface {
-    border-radius: 1.5rem;
-    padding: 2rem;
+    grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 3.5rem);
+    text-align: left;
+    border-radius: 2.25rem;
+  }
+
+  .task-body {
+    text-align: left;
+    align-items: flex-start;
+    max-width: 38rem;
+  }
+
+  .task-badge {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
