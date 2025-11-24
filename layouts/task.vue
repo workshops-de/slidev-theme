@@ -11,8 +11,6 @@
         <path d="M108 102h36" />
         <path d="M108 124h36" />
         <path d="M90 146h54" />
-        <path class="task-alert" d="M58 152l-12 30h60l-12-30Z" />
-        <circle class="task-alert-dot" cx="76" cy="172" r="4" />
       </svg>
     </div>
     <div class="task-content">
@@ -39,26 +37,26 @@
 .task-icon svg {
   width: 100%;
   height: auto;
-  stroke: #35e0ff;
+  stroke: #4286f4;
   stroke-width: 10;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
-  filter: drop-shadow(0 0 10px rgba(53, 224, 255, 0.6));
+  filter: drop-shadow(0 0 10px rgba(66, 134, 244, 0.6));
 }
 
 .task-icon .task-clip {
-  fill: rgba(53, 224, 255, 0.08);
+  fill: rgba(66, 134, 244, 0.1);
   stroke-width: 8;
 }
 
 .task-icon .task-alert {
   stroke-width: 6;
-  fill: rgba(53, 224, 255, 0.12);
+  fill: rgba(66, 134, 244, 0.16);
 }
 
 .task-icon .task-alert-dot {
-  fill: #35e0ff;
+  fill: #4286f4;
   stroke: none;
 }
 
