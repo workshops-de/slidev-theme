@@ -10,7 +10,7 @@ addons:
 
 Presentation slides for developers
 
-<img src="./public/angular_gradient.png" class="block mx-auto my-6 w-48" />
+<img src="./angular_gradient.png" class="block mx-auto my-6 w-48" />
 
 ---
 
@@ -319,6 +319,29 @@ layout: task
 ---
 
 # Create the first app
+
+---
+layout: section
+---
+
+# Diagrams
+
+---
+layout: default
+---
+
+# Mermaid
+
+```mermaid
+flowchart LR
+  Start([Start])
+  Start --> Decide{Action required?}
+  Decide -->|Yes| Work[Implement fix]
+  Decide -->|No| Review[Move to next slide]
+  Work --> Test[/Preview slide/]
+  Test --> Decide
+  Review --> End([Done])
+```
 
 ---
 layout: center
