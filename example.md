@@ -344,6 +344,20 @@ flowchart LR
 ```
 
 ---
+layout: section
+---
+
+# Drawings
+
+---
+layout: default
+---
+
+# New tldraw diagram
+
+<tldraw class="w-200 h-100" doc="tldraw/doc-mcpmRA0KLv2Nz9b7WTxvK.json"></tldraw>
+
+---
 layout: center
 class: "text-center"
 ---

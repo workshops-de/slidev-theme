@@ -123,13 +123,6 @@
   grid-template-columns: 1fr;
   align-items: center;
   text-align: center;
-  padding: clamp(2rem, 5vw, 3rem);
-  border-radius: 2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.75));
-  border: 1px solid var(--section-border-color, rgba(66, 134, 244, 0.2));
-  box-shadow:
-    0 25px 65px rgba(15, 23, 42, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .task-surface::after {

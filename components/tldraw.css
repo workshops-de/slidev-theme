@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
+@import url("tldraw/tldraw.css");
+
+/* 
+  Slides are CSS transformed at parent level, and Tldraw breaks on such transformations.
+  Inverse the transformation to make Tldraw work correctly. (note that `all: unset` only partially works) 
+*/
+.inverse-transform {
+  width: calc(var(--slide-scale) * 100%);
+  height: calc(var(--slide-scale) * 100%);
+  transform: scale(calc(1 / var(--slide-scale)))
+    translate(
+      calc(calc(var(--slide-scale) - 1) * -50%),
+      calc(calc(var(--slide-scale) - 1) * -50%)
+    );
+}
+
+/* transparent background */
+.tl-theme__light,
+.tl-theme__dark {
+  --color-background: rgba(0, 0, 0, 0);
+}
+
+/* only show outline in edit mode */
+.isNotEditable .tl-container__focused {
+  outline: none;
+}
+
+.isNotVisible {
+  visibility: hidden;
+}
