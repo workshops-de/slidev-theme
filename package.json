@@ -16,10 +16,6 @@
     "export": "slidev export example.md",
     "screenshot": "slidev export example.md --format png"
   },
-  "dependencies": {
-    "slidev-addon-tldraw": "^0.4.2",
-    "slidev-addon-window-mockup": "0.3.0"
-  },
   "devDependencies": {
     "@slidev/cli": "52.9.1",
     "@slidev/types": "52.9.1",

@@ -1,16 +1,11 @@
 ---
 theme: ./
 layout: cover
-image: angular_gradient.png
-addons:
-  - window-mockup
 ---
 
 # Slidev Theme Starter
 
 Presentation slides for developers
-
-<img src="./angular_gradient.png" class="block mx-auto my-6 w-48" />
 
 ---
 
@@ -83,13 +78,11 @@ layoutClass: gap-x-sm
 
 # Code
 
-<WindowMockup title="code-file.ending" codeblock>
 ```typescript
 export class MyModule {
   myState: unknown
 }
 ```
-</WindowMockup>
 
 ---
 layout: default
@@ -98,13 +91,11 @@ layoutClass: gap-x-sm
 
 # Code line numbers
 
-<WindowMockup title="code-file.ending" codeblock>
 ```typescript{*}{lines:true}
 export class MyModule {
   myState: unknown
 }
 ```
-</WindowMockup>
 
 ---
 layout: default
@@ -113,43 +104,35 @@ layoutClass: gap-x-sm
 
 ## Highlight single line
 
-<WindowMockup title="code-file.ending" codeblock>
 ```typescript{2}{lines:true}
 export class MyModule {
   myState: unknown
 }
 ```
-</WindowMockup>
 
 ## Highlight multiple lines
 
-<WindowMockup title="code-file.ending" codeblock>
 ```typescript{2,3}{lines:true}
 export class MyModule {
   myState: unknown
   method(): void {}
 }
 ```
-</WindowMockup>
 
 ## Navigate through lines
 
-<WindowMockup title="code-file.ending" codeblock>
 ```typescript{1|2|3|4}{lines:true}
 export class MyModule {
   myState: unknown
   method(): void {}
 }
 ```
-</WindowMockup>
 
 ---
 layout: default
 ---
 
 # Code - Magic Move
-
-<WindowMockup codeblock>
 
 ````md magic-move
 ```ts
@@ -172,15 +155,11 @@ console.log(`Step ${3}` as string);
 ```
 ````
 
-</WindowMockup>
-
 ---
 layout: default
 ---
 
 # Code - Long Code Sample
-
-<WindowMockup codeblock>
 
 ```ts{*}{lines:true, maxHeight: '300px'}
 console.log("1");
@@ -206,8 +185,6 @@ console.log("19");
 console.log("20");
 ```
 
-</WindowMockup>
-
 ---
 layout: two-cols-header
 layoutClass: gap-x-sm
@@ -221,13 +198,11 @@ layoutClass: gap-x-sm
 
 ::right::
 
-<WindowMockup title="code-file.ending" codeblock>
 ```typescript
 export class MyModule {
   myState: unknown
 }
 ```
-</WindowMockup>
 
 ---
 layout: two-cols-header
@@ -238,13 +213,11 @@ layoutClass: gap-x-sm
 
 ::left::
 
-<WindowMockup title="code-file.ending" codeblock>
 ```typescript
 export class MyModule {
   myState: unknown
 }
 ```
-</WindowMockup>
 
 ::right::
 
@@ -259,23 +232,19 @@ layoutClass: gap-x-sm
 
 ::left::
 
-<WindowMockup title="TypeScript" codeblock>
 ```typescript
 export class MyModule {
   myState: unknown
 }
 ```
-</WindowMockup>
 
 ::right::
 
-<WindowMockup title="HTML" codeblock>
 ```html
 <article>
   <h2>Hello, there</h2>
 </article>
 ```
-</WindowMockup>
 
 ::bottom::
 
@@ -290,23 +259,19 @@ layoutClass: gap-x-sm
 
 ::left::
 
-<WindowMockup title="TypeScript" codeblock>
 ```typescript
 export class MyModule {
   myState: unknown
 }
 ```
-</WindowMockup>
 
 ::right::
 
-<WindowMockup title="HTML" color="light" codeblock>
 ```html
 <article>
   <h2>Hello, there</h2>
 </article>
 ```
-</WindowMockup>
 
 ---
 layout: section
@@ -345,21 +310,6 @@ flowchart LR
 
 ---
 layout: section
----
-
-# Drawings
-
----
-layout: default
----
-
-# New tldraw diagram
-
-<tldraw class="w-200 h-100" doc="tldraw/doc-mcpmRA0KLv2Nz9b7WTxvK.json"></tldraw>
-
----
-layout: center
-class: "text-center"
 ---
 
 # Learn More
