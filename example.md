@@ -293,7 +293,7 @@ layout: little-what
 
 ::heading::
 
-# My Topic
+## My Topic
 
 ::explanation::
 This short primer tells the audience what the next topic is about.

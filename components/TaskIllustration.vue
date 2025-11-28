@@ -3,7 +3,6 @@
     v-bind="$attrs"
     xmlns="http://www.w3.org/2000/svg"
     width="400"
-    height="600"
     viewBox="0 0 400 600"
     role="img"
     aria-label="Task board illustration"
