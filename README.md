@@ -33,13 +33,23 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 
 This theme provides the following layouts:
 
-> TODO:
+| Layout        | Description                                                          |
+| ------------- | -------------------------------------------------------------------- |
+| `cover`       | Title slide with workshop title, subtitle, and optional body content |
+| `section`     | Section divider with decorative background and "New Topic" badge     |
+| `task`        | Task slide with orange theme and task illustration                   |
+| `little-what` | Explanation slide with silver theme and purpose text                 |
 
 ## Components
 
 This theme provides the following components:
 
-> TODO:
+| Component                | Description                                  |
+| ------------------------ | -------------------------------------------- |
+| `TaskIllustration`       | SVG illustration of a task board with pencil |
+| `LittleWhatIllustration` | SVG illustration of a silver light bulb      |
+| `SlideFooter`            | Footer component with workshops.de logo      |
+| `WorkshopsLogo`          | SVG component for the workshops.de logo      |
 
 ## Contributing
 
