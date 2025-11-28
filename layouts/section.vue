@@ -7,19 +7,26 @@
       <div class="section-ribbon"></div>
     </div>
 
-    <div class="section-surface relative z-[1] flex-1 flex flex-col p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] max-[768px]:rounded-[1.75rem] max-[768px]:p-8" :class="image ? 'text-left' : 'text-center'">
-      <div class="section-content flex-1 grid place-items-center">
-        <div :class="image ? 'flex flex-row items-center gap-12 max-[768px]:flex-col' : 'inline-flex flex-col items-center justify-center'">
-          <img v-if="image" :src="image" alt="" :class="imageClass" />
-          <div class="flex flex-col">
-            <slot />
-            <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold">
-              <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[var(--slidev-theme-primary)]"></span>
-              <span class="eyebrow-copy">New Topic</span>
-            </div>
+    <div
+      class="section-surface relative z-[1] flex-1 flex flex-col p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] max-[768px]:rounded-[1.75rem] max-[768px]:p-8"
+      :class="image ? 'text-left' : 'text-center'"
+    >
+      <!-- Main Content Area -->
+      <div
+        class="section-content flex-1 flex items-center justify-center"
+        :class="image ? 'flex-row gap-12 max-[768px]:flex-col' : 'flex-col'"
+      >
+        <img v-if="image" :src="image" alt="" :class="imageClass" />
+        <div class="flex flex-col">
+          <slot />
+          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold">
+            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[var(--slidev-theme-primary)]"></span>
+            <span class="eyebrow-copy">New Topic</span>
           </div>
         </div>
       </div>
+
+      <!-- Footer Logo -->
       <div class="section-footer flex justify-center items-center pointer-events-none">
         <img src="/workshops-logo.svg" alt="workshops.de" class="h-6 w-auto" />
       </div>
@@ -47,15 +54,8 @@ defineProps<{
 .section-grid {
   position: absolute;
   inset: -25%;
-  background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.04) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      rgba(255, 255, 255, 0.04) 1px,
-      transparent 1px
-    );
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 120px 120px;
   transform: rotate(-8deg);
   mix-blend-mode: screen;
@@ -95,9 +95,7 @@ defineProps<{
 
 .section-surface {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.75));
-  box-shadow:
-    0 25px 65px rgba(15, 23, 42, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  box-shadow: 0 25px 65px rgba(15, 23, 42, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .section-surface::after {
@@ -109,12 +107,9 @@ defineProps<{
   pointer-events: none;
 }
 
-
 html.dark .section-surface {
   background: linear-gradient(145deg, rgba(4, 8, 21, 0.92), rgba(4, 8, 21, 0.7));
-  box-shadow:
-    0 25px 45px rgba(4, 8, 21, 0.65),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 25px 45px rgba(4, 8, 21, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 html.dark .section-surface::after {
@@ -122,25 +117,18 @@ html.dark .section-surface::after {
 }
 
 html.dark .section-grid {
-  background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      rgba(255, 255, 255, 0.08) 1px,
-      transparent 1px
-    );
-}
-
-html.dark .section-eyebrow {
-  background: rgba(66, 134, 244, 0.2);
-  border-color: rgba(66, 134, 244, 0.35);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
 }
 
 .section-eyebrow {
   background: rgba(66, 134, 244, 0.14);
   border: 1px solid rgba(66, 134, 244, 0.3);
+}
+
+html.dark .section-eyebrow {
+  background: rgba(66, 134, 244, 0.2);
+  border-color: rgba(66, 134, 244, 0.35);
 }
 
 .section-eyebrow .brand-dot {
