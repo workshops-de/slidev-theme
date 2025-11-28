@@ -1,4 +1,4 @@
-# slidev-theme-workshops-de
+# @workshops-de/slidev-theme
 
 [![NPM version](https://img.shields.io/npm/v/slidev-theme-workshops-de?color=3AB9D4&label=)](https://www.npmjs.com/package/slidev-theme-workshops-de)
 
@@ -24,7 +24,7 @@ A theme for workshops held by [workshops.de](https://workshops.de).
 Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme automatically.
 
 <pre><code>---
-theme: <b>workshops-de</b>
+theme: <b>@workshops-de/slidev-theme</b>
 ---</code></pre>
 
 Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-theme).
