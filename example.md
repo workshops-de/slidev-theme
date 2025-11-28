@@ -80,7 +80,7 @@ layoutClass: gap-x-sm
 
 ```typescript
 export class MyModule {
-  myState: unknown
+  myState: unknown;
 }
 ```
 
@@ -200,7 +200,7 @@ layoutClass: gap-x-sm
 
 ```typescript
 export class MyModule {
-  myState: unknown
+  myState: unknown;
 }
 ```
 
@@ -215,7 +215,7 @@ layoutClass: gap-x-sm
 
 ```typescript
 export class MyModule {
-  myState: unknown
+  myState: unknown;
 }
 ```
 
@@ -234,7 +234,7 @@ layoutClass: gap-x-sm
 
 ```typescript
 export class MyModule {
-  myState: unknown
+  myState: unknown;
 }
 ```
 
@@ -261,7 +261,7 @@ layoutClass: gap-x-sm
 
 ```typescript
 export class MyModule {
-  myState: unknown
+  myState: unknown;
 }
 ```
 
@@ -272,6 +272,14 @@ export class MyModule {
   <h2>Hello, there</h2>
 </article>
 ```
+
+---
+layout: section
+image: /workshops-logo.svg
+imageClass: w-42
+---
+
+# Tasks
 
 ---
 layout: section

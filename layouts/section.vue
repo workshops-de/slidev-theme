@@ -7,17 +7,32 @@
       <div class="section-ribbon"></div>
     </div>
 
-    <div class="section-surface relative z-[1] flex-1 grid place-items-center text-center p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
-      <div class="section-content inline-flex flex-col items-center justify-center">
-        <slot />
-        <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold mt-7">
-          <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[var(--slidev-theme-primary)]"></span>
-          <span class="eyebrow-copy">New Topic</span>
+    <div class="section-surface relative z-[1] flex-1 flex flex-col p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] max-[768px]:rounded-[1.75rem] max-[768px]:p-8" :class="image ? 'text-left' : 'text-center'">
+      <div class="section-content flex-1 grid place-items-center">
+        <div :class="image ? 'flex flex-row items-center gap-12 max-[768px]:flex-col' : 'inline-flex flex-col items-center justify-center'">
+          <img v-if="image" :src="image" alt="" :class="imageClass" />
+          <div class="flex flex-col">
+            <slot />
+            <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold">
+              <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[var(--slidev-theme-primary)]"></span>
+              <span class="eyebrow-copy">New Topic</span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="section-footer flex justify-center items-center pointer-events-none">
+        <img src="/workshops-logo.svg" alt="workshops.de" class="h-6 w-auto" />
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps<{
+  image?: string
+  imageClass?: string
+}>()
+</script>
 
 <style>
 .section-content :where(h1, h2, p) {
