@@ -16,7 +16,8 @@
         class="section-content flex-1 flex items-center justify-center"
         :class="image ? 'flex-row gap-12 max-[768px]:flex-col' : 'flex-col'"
       >
-        <img v-if="image" :src="image" alt="" :class="imageClass" />
+        <TaskIllustration v-if="image === '/task.svg'" :class="imageClass" />
+        <img v-else-if="image" :src="image" alt="" :class="imageClass" />
         <div class="flex flex-col">
           <slot />
           <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold w-fit">
@@ -35,6 +36,7 @@
 </template>
 
 <script setup lang="ts">
+import TaskIllustration from '../components/TaskIllustration.vue';
 import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 
 defineProps<{

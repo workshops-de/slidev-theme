@@ -7,5 +7,5 @@
 </template>
 
 <script setup lang="ts">
-import WorkshopsLogo from './WorkshopsLogo.vue'
+import WorkshopsLogo from './WorkshopsLogo.vue';
 </script>

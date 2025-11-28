@@ -17,7 +17,7 @@
             <span class="eyebrow-copy">Task</span>
           </div>
         </div>
-        <img src="/task.svg" alt="Task board illustration" class="task-illustration w-50 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
+        <TaskIllustration class="task-illustration w-50 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
       </div>
 
       <!-- Footer Logo -->
@@ -30,6 +30,7 @@
 
 <script setup lang="ts">
 import WorkshopsLogo from '../components/WorkshopsLogo.vue';
+import TaskIllustration from '../components/TaskIllustration.vue';
 </script>
 
 <style>
