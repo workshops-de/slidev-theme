@@ -13,10 +13,10 @@
         <div class="copy max-w-3xl flex flex-col gap-8">
           <div class="heading-stack flex flex-col gap-4">
             <slot name="heading">
-              <h1>Little What</h1>
+              <slot name="heading"></slot>
             </slot>
             <p class="purpose-text text-lg font-medium leading-relaxed text-[var(--little-what-purpose-color)]">
-              <slot>
+              <slot name="explanation">
               </slot>
             </p>
           </div>

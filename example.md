@@ -291,6 +291,11 @@ layout: section
 layout: little-what
 ---
 
+::heading::
+
+# My Topic
+
+::explanation::
 This short primer tells the audience what the next topic is about.
 
 ---
