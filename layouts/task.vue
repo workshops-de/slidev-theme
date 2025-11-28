@@ -22,11 +22,15 @@
 
       <!-- Footer Logo -->
       <div class="section-footer flex justify-center items-center pointer-events-none">
-        <img src="/workshops-logo.svg" alt="workshops.de" class="h-6 w-auto" />
+        <WorkshopsLogo class="h-6 w-auto" />
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import WorkshopsLogo from '../components/WorkshopsLogo.vue';
+</script>
 
 <style>
 .section-content :where(h1, h2, p) {
