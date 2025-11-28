@@ -26,7 +26,7 @@
             <span class="eyebrow-copy">Little What</span>
           </div>
         </div>
-        <img src="/little-what.svg" alt="Silver light bulb illustration" class="little-what-illustration w-52 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
+        <LittleWhatIllustration class="little-what-illustration w-52 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
       </div>
 
       <!-- Footer Logo -->
@@ -38,6 +38,7 @@
 </template>
 
 <script setup lang="ts">
+import LittleWhatIllustration from '../components/LittleWhatIllustration.vue';
 import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 </script>
 
