@@ -1,6 +1,6 @@
 # @workshops-de/slidev-theme
 
-[![NPM version](https://img.shields.io/npm/v/slidev-theme-workshops-de?color=3AB9D4&label=)](https://www.npmjs.com/package/slidev-theme-workshops-de)
+[![NPM version](https://img.shields.io/npm/v/@workshops-de-slidev-theme?color=3AB9D4&label=)](https://www.npmjs.com/package/@workshops-de/slidev-theme)
 
 A theme for workshops held by [workshops.de](https://workshops.de).
 
