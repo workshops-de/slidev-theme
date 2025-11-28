@@ -275,7 +275,7 @@ export class MyModule {
 
 ---
 layout: section
-image: /workshops-logo.svg
+image: /task.svg
 imageClass: w-42
 ---
 
@@ -288,10 +288,16 @@ layout: section
 # Tasks
 
 ---
+layout: little-what
+---
+
+This short primer tells the audience what the next topic is about.
+
+---
 layout: task
 ---
 
-# Create the first app
+## Create your 1st component in your project
 
 ---
 layout: section

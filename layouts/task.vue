@@ -1,211 +1,92 @@
 <template>
-  <div class="slidev-layout task flex flex-col min-h-full bg-[var(--section-surface-bg)] min-[640px]:p-[clamp(2rem,5vw,4rem)] min-[960px]:p-[clamp(2.5rem,5vw,4.5rem)]">
-    <div class="task-backdrop absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
-      <div class="task-grid"></div>
-      <div class="task-orb orb-left"></div>
-      <div class="task-orb orb-right"></div>
-      <div class="task-ribbon"></div>
+  <div class="slidev-layout section task-next flex flex-col min-h-full p-[clamp(2.5rem,5vw,4.5rem)] bg-[var(--section-surface-bg)] text-[var(--section-text-color)] transition-[background_0.4s_ease,color_0.4s_ease] relative overflow-hidden max-[768px]:p-8">
+    <div class="section-backdrop absolute z-0 inset-0 pointer-events-none" aria-hidden="true">
+      <div class="section-grid"></div>
+      <div class="section-orb orb-left"></div>
+      <div class="section-orb orb-right"></div>
+      <div class="section-ribbon"></div>
     </div>
 
-    <div class="task-surface relative z-[1] grid grid-cols-1 items-center text-center min-[640px]:rounded-[2rem] min-[640px]:p-[clamp(2.25rem,5vw,3.25rem)] min-[960px]:grid-cols-[minmax(220px,320px)_minmax(0,1fr)] min-[960px]:gap-[clamp(2rem,4vw,3.5rem)] min-[960px]:text-left min-[960px]:rounded-[2.25rem]">
-      <div class="task-icon relative w-full flex items-center justify-center" aria-hidden="true">
-        <svg viewBox="0 0 240 280" role="presentation" focusable="false" class="w-[min(300px,100%)] h-auto">
-          <defs>
-            <linearGradient id="task-clip-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#6ec5ff" />
-              <stop offset="100%" stop-color="#4a7dff" />
-            </linearGradient>
-            <linearGradient id="task-board-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#f7f9ff" />
-              <stop offset="100%" stop-color="#dae6ff" />
-            </linearGradient>
-          </defs>
-
-          <rect class="task-glow" x="54" y="46" width="152" height="206" rx="44" />
-
-            <g class="task-row" transform="translate(0, 0)">
-                <circle class="task-dot" cx="86" cy="120" r="8" />
-                <rect class="task-line" x="106" y="108" width="72" height="18" rx="9" />
-            </g>
-
-            <g class="task-row" transform="translate(0, 40)">
-                <circle class="task-dot" cx="86" cy="120" r="8" />
-                <rect class="task-line" x="106" y="108" width="86" height="18" rx="9" />
-            </g>
-
-            <g class="task-row" transform="translate(0, 80)">
-                <circle class="task-dot" cx="86" cy="120" r="8" />
-                <rect class="task-line" x="106" y="108" width="70" height="18" rx="9" />
-            </g>
-
-        </svg>
+    <div class="section-surface relative z-[1] flex-1 flex flex-col p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
+      <!-- Main Content Area -->
+      <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
+        <div class="flex flex-col gap-6 max-w-3xl">
+          <slot />
+          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold self-start w-fit">
+            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[#fb923c]"></span>
+            <span class="eyebrow-copy">Task</span>
+          </div>
+        </div>
+        <img src="/task.svg" alt="Task board illustration" class="task-illustration w-50 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
       </div>
 
-      <div class="task-body relative z-[1] text-center flex flex-col items-center gap-4 min-[960px]:text-left min-[960px]:items-start min-[960px]:max-w-[38rem]">
-        <slot />
-        <div class="task-badge inline-flex items-center gap-[0.6rem] px-[1.1rem] py-[0.45rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold mt-6 mx-auto min-[960px]:mx-0">
-          <span class="badge-dot w-[0.7rem] h-[0.7rem] rounded-full bg-[var(--slidev-theme-primary)]"></span>
-          <span class="badge-copy">ACTION REQUIRED</span>
-        </div>
+      <!-- Footer Logo -->
+      <div class="section-footer flex justify-center items-center pointer-events-none">
+        <img src="/workshops-logo.svg" alt="workshops.de" class="h-6 w-auto" />
       </div>
     </div>
   </div>
 </template>
 
 <style>
-.task-body ::slotted(h1),
-.task-body h1 {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  @apply font-bold uppercase tracking-[0.05em] leading-[1.1] m-0 text-inherit;
+.section-content :where(h1, h2, p) {
+  margin: 0;
+  color: inherit;
 }
 
-.task-body ::slotted(p) {
-  @apply text-[1.2rem] text-inherit;
+.section-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
 }
 
-.task-grid {
-  position: absolute;
-  inset: -20%;
-  background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.04) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      rgba(255, 255, 255, 0.04) 1px,
-      transparent 1px
-    );
-  background-size: 120px 120px;
-  transform: rotate(-7deg);
-  mix-blend-mode: screen;
+.section-content p {
+  line-height: 1.65;
+  max-width: 48ch;
 }
 
-.task-orb {
-  position: absolute;
-  width: clamp(220px, 33vw, 420px);
-  height: clamp(220px, 33vw, 420px);
-  border-radius: 50%;
-  filter: blur(10px);
-  opacity: 0.55;
+.task-illustration {
+  transform: rotate(-1deg);
 }
 
-.task-orb.orb-left {
-  top: -10%;
-  left: -6%;
-  background: radial-gradient(circle, rgba(66, 134, 244, 0.6), transparent 60%);
+/* Orange theme overrides */
+.task-next .section-orb.orb-left {
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.65), transparent 60%);
 }
 
-.task-orb.orb-right {
-  bottom: -18%;
-  right: -10%;
-  background: radial-gradient(circle, rgba(48, 35, 174, 0.75), transparent 55%);
+.task-next .section-orb.orb-right {
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.7), transparent 55%);
 }
 
-.task-ribbon {
-  position: absolute;
-  inset: 12% -18% auto -12%;
-  height: clamp(200px, 26vw, 360px);
-  background: var(--workshops-blue-gradient);
-  opacity: 0.45;
-  filter: blur(14px);
-  transform: rotate(-5deg) skewX(-5deg);
-  border-radius: 28% 72% 68% 32% / 42% 36% 64% 58%;
+.task-next .section-ribbon {
+  background: linear-gradient(120deg, #c2410c, #ea580c, #fb923c);
 }
 
-.task-surface::after {
-  content: '';
-  position: absolute;
-  inset: 1.5rem;
-  border-radius: 2rem;
-  border: 1px dashed rgba(66, 134, 244, 0.25);
-  pointer-events: none;
+.task-next .section-surface {
+  border-color: rgba(251, 146, 60, 0.25);
 }
 
-.task-icon svg {
-  filter: drop-shadow(0 25px 60px rgba(45, 105, 255, 0.28));
+.task-next .section-surface::after {
+  border-color: rgba(251, 146, 60, 0.25);
 }
 
-.task-icon .task-glow {
-  fill: rgba(66, 134, 244, 0.18);
-  filter: blur(16px);
+html.dark .task-next .section-surface::after {
+  border-color: rgba(251, 146, 60, 0.35);
 }
 
-.task-icon .task-board {
-  fill: url(#task-board-gradient);
-  stroke: rgba(66, 134, 244, 0.4);
-  stroke-width: 6;
+.task-next .section-eyebrow {
+  background: rgba(251, 146, 60, 0.14);
+  border-color: rgba(251, 146, 60, 0.3);
 }
 
-.task-icon .task-clip {
-  fill: url(#task-clip-gradient);
-  stroke: rgba(66, 134, 244, 0.55);
-  stroke-width: 8;
-  stroke-linejoin: round;
+html.dark .task-next .section-eyebrow {
+  background: rgba(251, 146, 60, 0.2);
+  border-color: rgba(251, 146, 60, 0.35);
 }
 
-.task-icon .task-clip-highlight {
-  fill: rgba(255, 255, 255, 0.65);
-  stroke: rgba(66, 134, 244, 0.4);
-  stroke-width: 4;
-}
-
-.task-icon .task-details .task-paper {
-  fill: rgba(255, 255, 255, 0.85);
-  stroke: rgba(66, 134, 244, 0.15);
-  stroke-width: 4;
-}
-
-.task-icon .task-dot {
-  fill: rgba(66, 134, 244, 1);
-  filter: drop-shadow(0 0 10px rgba(66, 134, 244, 0.5));
-}
-
-.task-icon .task-line {
-  fill: rgba(66, 134, 244, 0.9);
-}
-
-.task-icon .task-checkmark {
-  fill: none;
-  stroke: rgba(66, 134, 244, 0.95);
-  stroke-width: 10;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.task-badge {
-  background: rgba(66, 134, 244, 0.2);
-  border: 1px solid rgba(66, 134, 244, 0.3);
-}
-
-.badge-dot {
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.9);
-}
-
-html.dark .task-surface {
-  background: linear-gradient(145deg, rgba(4, 8, 21, 0.92), rgba(4, 8, 21, 0.72));
-  box-shadow:
-    0 25px 45px rgba(4, 8, 21, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-html.dark .task-surface::after {
-  border-color: rgba(66, 134, 244, 0.35);
-}
-
-html.dark .task-grid {
-  background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      rgba(255, 255, 255, 0.08) 1px,
-      transparent 1px
-    );
-}
-
-html.dark .task-badge {
-  background: rgba(66, 134, 244, 0.3);
-  border-color: rgba(66, 134, 244, 0.45);
+.task-next .section-eyebrow .brand-dot {
+  box-shadow: 0 0 12px rgba(251, 146, 60, 0.8);
 }
 </style>
