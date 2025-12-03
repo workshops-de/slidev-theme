@@ -13,7 +13,7 @@
         <SectionBadge text="Task" theme="orange" />
         <WorkshopsLogo class="h-6 w-auto pointer-events-none" />
       </div>
-      <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
+      <div class="section-content flex-1 flex items-center flex-row gap-12 max-[768px]:flex-col">
         <div class="flex flex-col gap-12 max-w-3xl">
           <slot />
         </div>

@@ -13,7 +13,7 @@
         <SectionBadge text="Little What" theme="silver" />
         <WorkshopsLogo class="h-6 w-auto pointer-events-none" />
       </div>
-      <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
+      <div class="section-content flex-1 flex items-center flex-row gap-12 max-[768px]:flex-col">
         <div class="copy max-w-3xl flex flex-col gap-8">
           <div class="heading-stack flex flex-col gap-4">
             <p class="purpose-text text-lg font-medium leading-relaxed text-[var(--little-what-purpose-color)]">
