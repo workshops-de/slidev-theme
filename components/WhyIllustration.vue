@@ -60,22 +60,22 @@
     />
 
     <!-- Cardinal direction markers -->
-    <g stroke="#fef3c7" stroke-width="2" fill="#fef3c7">
+    <g :stroke="isDark ? '#fef3c7' : '#1f2937'" stroke-width="2" :fill="isDark ? '#fef3c7' : '#1f2937'">
       <!-- North -->
       <path d="M200 130 L208 150 L192 150 Z" />
-      <text x="200" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#fef3c7">N</text>
+      <text x="200" y="100" text-anchor="middle" font-size="16" font-weight="bold" :fill="isDark ? '#fef3c7' : '#1f2937'">N</text>
 
       <!-- South -->
       <path d="M200 470 L192 450 L208 450 Z" />
-      <text x="200" y="540" text-anchor="middle" font-size="16" font-weight="bold" fill="#fef3c7">S</text>
+      <text x="200" y="540" text-anchor="middle" font-size="16" font-weight="bold" :fill="isDark ? '#fef3c7' : '#1f2937'">S</text>
 
       <!-- East -->
       <path d="M270 300 L250 292 L250 308 Z" />
-      <text x="420" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#fef3c7">E</text>
+      <text x="420" y="320" text-anchor="middle" font-size="16" font-weight="bold" :fill="isDark ? '#fef3c7' : '#1f2937'">E</text>
 
       <!-- West -->
       <path d="M130 300 L150 308 L150 292 Z" />
-      <text x="0" y="325" text-anchor="middle" font-size="16" font-weight="bold" fill="#fef3c7">W</text>
+      <text x="0" y="325" text-anchor="middle" font-size="16" font-weight="bold" :fill="isDark ? '#fef3c7' : '#1f2937'">W</text>
     </g>
 
     <!-- Degree markers -->
@@ -137,6 +137,9 @@
 </template>
 
 <script setup lang="ts">
+import { useDarkMode } from '@slidev/client'
+
 const uid = crypto.randomUUID()
+const { isDark } = useDarkMode()
 defineOptions({ name: 'WhyIllustration' })
 </script>
