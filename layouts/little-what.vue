@@ -11,6 +11,11 @@
       <!-- Main Content Area -->
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
         <div class="copy max-w-3xl flex flex-col gap-8">
+          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold self-start w-fit">
+            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[#cdd4de]"></span>
+            <span class="eyebrow-copy">Little What</span>
+          </div>
+
           <div class="heading-stack flex flex-col gap-4">
             <slot name="heading">
               <slot name="heading"></slot>
@@ -19,11 +24,6 @@
               <slot name="explanation">
               </slot>
             </p>
-          </div>
-
-          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold self-start w-fit">
-            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[#cdd4de]"></span>
-            <span class="eyebrow-copy">Little What</span>
           </div>
         </div>
         <LittleWhatIllustration class="little-what-illustration w-40 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />

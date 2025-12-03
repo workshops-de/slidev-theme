@@ -1,0 +1,5 @@
+/** h1 has same size as h2 just for easier editing */
+.slidev-layout :where(h1, h2) {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}

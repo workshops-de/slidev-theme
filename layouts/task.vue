@@ -10,12 +10,12 @@
     <div class="section-surface relative z-[1] flex-1 flex flex-col p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
       <!-- Main Content Area -->
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
-        <div class="flex flex-col gap-6 max-w-3xl">
-          <slot />
+        <div class="flex flex-col gap-12 max-w-3xl">
           <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold self-start w-fit">
             <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[#fb923c]"></span>
             <span class="eyebrow-copy">Task</span>
           </div>
+          <slot />
         </div>
         <TaskIllustration class="task-illustration w-50 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
       </div>
@@ -29,24 +29,11 @@
 </template>
 
 <script setup lang="ts">
-import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 import TaskIllustration from '../components/TaskIllustration.vue';
+import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 </script>
 
 <style>
-.section-content :where(h1, h2, p) {
-  margin: 0;
-  color: inherit;
-}
-
-.section-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4.25rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 1.1;
-}
-
 .section-content p {
   line-height: 1.65;
   max-width: 48ch;

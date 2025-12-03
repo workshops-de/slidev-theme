@@ -7,20 +7,19 @@
       <div class="section-ribbon"></div>
     </div>
 
-    <div class="section-surface relative z-[1] flex-1 flex flex-col gap-y-6 p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
+    <div class="section-surface relative z-[1] flex-1 flex flex-col gap-y-6 p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[rgba(184,82,80,0.25)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
       <!-- Main Content Area -->
       <div class="copy max-w-3xl flex flex-row gap-8">
-          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold self-start w-fit">
-            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[#b85450]"></span>
+          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold self-start w-fit bg-[rgba(184,82,80,0.14)] border border-[rgba(184,82,80,0.3)] dark:bg-[rgba(184,82,80,0.2)] dark:border-[rgba(184,82,80,0.35)]">
+            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[#b85450] shadow-[0_0_12px_rgba(184,82,80,0.8)]"></span>
             <span class="eyebrow-copy">What If</span>
           </div>
         </div>
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
-
-           <p class="purpose-text text-lg font-medium leading-relaxed">
-              <slot>
-              </slot>
-           </p>
+        <p class="purpose-text text-lg font-medium leading-relaxed text-[var(--what-if-purpose-color)] border-l-4 border-l-[rgba(184,82,80,0.5)] pl-4">
+          <slot>
+          </slot>
+        </p>
       </div>
 
       <!-- Footer Logo -->
@@ -49,16 +48,6 @@ import WorkshopsLogo from '../components/WorkshopsLogo.vue';
   line-height: 1.1;
 }
 
-.what-if .purpose-text {
-  color: var(--what-if-purpose-color);
-  border-left: 4px solid rgba(184, 82, 80, 0.5);
-  padding-left: 1rem;
-}
-
-.what-if-illustration {
-  transform: rotate(-3deg);
-}
-
 /* Wine red theme overrides */
 .what-if .section-orb.orb-left {
   background: radial-gradient(circle, rgba(232, 200, 200, 0.65), transparent 60%);
@@ -72,23 +61,17 @@ import WorkshopsLogo from '../components/WorkshopsLogo.vue';
   background: linear-gradient(120deg, #722f37, #b85450, #d4a5a5);
 }
 
-.what-if .section-surface {
-  border-color: rgba(184, 82, 80, 0.25);
+
+/* CSS Variables */
+:root {
+  --what-if-purpose-color: #8b2635;
 }
 
-.what-if .section-surface::after {
-  content: '';
-  position: absolute;
-  inset: 1.5rem;
-  border-radius: 2rem;
-  border: 1px dashed rgba(184, 82, 80, 0.25);
-  pointer-events: none;
+html.dark {
+  --what-if-purpose-color: #e8c4c4;
 }
 
-html.dark .what-if .section-surface::after {
-  border-color: rgba(184, 82, 80, 0.35);
-}
-
+/* Add scoped styles for the eyebrow and border */
 .what-if .section-eyebrow {
   background: rgba(184, 82, 80, 0.14);
   border-color: rgba(184, 82, 80, 0.3);
@@ -103,12 +86,16 @@ html.dark .what-if .section-eyebrow {
   box-shadow: 0 0 12px rgba(184, 82, 80, 0.8);
 }
 
-/* CSS Variables */
-:root {
-  --what-if-purpose-color: #8b2635;
+.what-if .section-surface::after {
+  content: '';
+  position: absolute;
+  inset: 1.5rem;
+  border-radius: 2rem;
+  border: 1px dashed rgba(184, 82, 80, 0.25);
+  pointer-events: none;
 }
 
-html.dark {
-  --what-if-purpose-color: #e8c4c4;
+html.dark .what-if .section-surface::after {
+  border-color: rgba(184, 82, 80, 0.35);
 }
 </style>

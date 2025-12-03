@@ -19,11 +19,11 @@
         <TaskIllustration v-if="image === '/task.svg'" :class="imageClass" />
         <img v-else-if="image" :src="image" alt="" :class="imageClass" />
         <div class="flex flex-col">
-          <slot />
           <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold w-fit">
             <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[var(--slidev-theme-primary)]"></span>
             <span class="eyebrow-copy">New Topic</span>
           </div>
+          <slot />
         </div>
       </div>
 
