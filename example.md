@@ -297,11 +297,6 @@ Without this setup we would loose a lot of time updating our material
 layout: little-what
 ---
 
-::heading::
-
-## My Topic
-
-::explanation::
 This short primer tells the audience what the next topic is about.
 
 ---

@@ -17,8 +17,7 @@
         <div class="copy max-w-3xl flex flex-col gap-8">
           <div class="heading-stack flex flex-col gap-4">
             <p class="purpose-text text-lg font-medium leading-relaxed text-[var(--little-what-purpose-color)]">
-              <slot name="explanation">
-              </slot>
+              <slot />
             </p>
           </div>
         </div>
