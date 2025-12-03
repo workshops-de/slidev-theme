@@ -8,20 +8,18 @@
     </div>
 
     <div class="section-surface relative z-[1] flex-1 flex flex-col gap-y-6 p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[rgba(184,82,80,0.25)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
-      <!-- Main Content Area -->
-      <div class="copy max-w-3xl flex flex-row gap-8">
-          <SectionBadge text="What If" theme="red" />
-        </div>
-      <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
-        <p class="purpose-text text-lg font-medium leading-relaxed text-[var(--what-if-purpose-color)] border-l-4 border-l-[rgba(184,82,80,0.5)] pl-4">
-          <slot>
-          </slot>
-        </p>
+      <!-- Row 1: Badge and Logo -->
+      <div class="row-1 flex flex-row justify-between items-center">
+        <SectionBadge text="What If" theme="red" />
+        <WorkshopsLogo class="h-6 w-auto pointer-events-none" />
       </div>
 
-      <!-- Footer Logo -->
-      <div class="section-footer flex justify-center items-center pointer-events-none">
-        <WorkshopsLogo class="h-6 w-auto" />
+      <!-- Row 2: Text and Illustration -->
+      <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
+          <p class="purpose-text text-lg font-medium leading-relaxed text-[var(--what-if-purpose-color)] border-l-4 border-l-[rgba(184,82,80,0.5)] pl-4">
+            <slot>
+            </slot>
+          </p>
       </div>
     </div>
   </div>
@@ -44,6 +42,10 @@ import WorkshopsLogo from '../components/WorkshopsLogo.vue';
   text-transform: uppercase;
   letter-spacing: 0.06em;
   line-height: 1.1;
+}
+
+.what-if .why-illustration {
+  transform: rotate(-3deg);
 }
 
 /* Wine red theme overrides */

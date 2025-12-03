@@ -8,9 +8,10 @@
     </div>
 
     <div class="section-surface purple-panel relative z-[1] flex-1 flex flex-col gap-y-6 p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
-      <!-- Main Content Area -->
-      <div class="copy max-w-3xl flex flex-row gap-8">
+      <!-- Row 1: Badge and Logo -->
+      <div class="row-1 flex flex-row justify-between items-center">
         <SectionBadge text="Why" theme="purple" />
+        <WorkshopsLogo class="h-6 w-auto pointer-events-none" />
       </div>
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
         <div class="copy max-w-3xl flex flex-col gap-8">
@@ -21,11 +22,6 @@
           </div>
         </div>
         <WhyIllustration class="why-illustration w-40 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
-      </div>
-
-      <!-- Footer Logo -->
-      <div class="section-footer flex justify-center items-center pointer-events-none">
-        <WorkshopsLogo class="h-6 w-auto" />
       </div>
     </div>
   </div>
