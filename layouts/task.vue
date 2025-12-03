@@ -7,11 +7,13 @@
       <div class="section-ribbon"></div>
     </div>
 
-    <div class="section-surface relative z-[1] flex-1 flex flex-col p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
+    <div class="section-surface relative z-[1] flex-1 flex flex-col gap-y-6 p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
       <!-- Main Content Area -->
+      <div class="copy max-w-3xl flex flex-row gap-8">
+        <SectionBadge text="Task" theme="orange" />
+      </div>
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
         <div class="flex flex-col gap-12 max-w-3xl">
-          <SectionBadge text="Task" theme="orange" />
           <slot />
         </div>
         <TaskIllustration class="task-illustration w-50 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />

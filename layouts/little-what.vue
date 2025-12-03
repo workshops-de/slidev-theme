@@ -9,14 +9,12 @@
 
     <div class="section-surface silver-panel relative z-[1] flex-1 flex flex-col gap-y-6 p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
       <!-- Main Content Area -->
+      <div class="copy max-w-3xl flex flex-row gap-8">
+        <SectionBadge text="Little What" theme="silver" />
+      </div>
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
         <div class="copy max-w-3xl flex flex-col gap-8">
-          <SectionBadge text="Little What" theme="silver" />
-
           <div class="heading-stack flex flex-col gap-4">
-            <slot name="heading">
-              <slot name="heading"></slot>
-            </slot>
             <p class="purpose-text text-lg font-medium leading-relaxed text-[var(--little-what-purpose-color)]">
               <slot name="explanation">
               </slot>
@@ -41,12 +39,6 @@ import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 </script>
 
 <style>
-/** h1 has same size as h2 just for easier editing */
-h1 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .little-what .section-content :where(h1, h2, p) {
   margin: 0;
   color: inherit;

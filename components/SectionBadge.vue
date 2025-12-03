@@ -10,7 +10,7 @@ import { computed } from 'vue';
 
 const props = defineProps<{
   text: string;
-  theme: 'red' | 'orange' | 'silver' | 'blue';
+  theme: 'red' | 'orange' | 'silver' | 'blue' | 'purple';
 }>();
 
 const themeClasses = computed(() => {
@@ -19,6 +19,7 @@ const themeClasses = computed(() => {
     'theme-orange': props.theme === 'orange',
     'theme-silver': props.theme === 'silver',
     'theme-blue': props.theme === 'blue',
+    'theme-purple': props.theme === 'purple',
   };
 });
 
@@ -28,6 +29,7 @@ const dotClasses = computed(() => {
     'bg-[#fb923c]': props.theme === 'orange',
     'bg-[#cdd4de]': props.theme === 'silver',
     'bg-[var(--slidev-theme-primary)]': props.theme === 'blue',
+    'bg-[#8b5cf6]': props.theme === 'purple',
   };
 });
 </script>
@@ -93,5 +95,20 @@ html.dark .theme-blue {
 
 .theme-blue .brand-dot {
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+}
+
+/* Purple theme */
+.theme-purple {
+  background: rgba(139, 92, 246, 0.14);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+html.dark .theme-purple {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+.theme-purple .brand-dot {
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.8);
 }
 </style>
