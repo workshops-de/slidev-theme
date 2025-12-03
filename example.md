@@ -305,16 +305,10 @@ layout: task
 ## Create your 1st component in your project
 
 ---
-layout: section
+layout: what-if
 ---
 
-# Diagram
-
-<!-- My comment -->
-
-<!--
-M
--->
+...we offer workshops in English, too? And the definition of this topic in one sentence takes a little more space?
 
 ---
 layout: default

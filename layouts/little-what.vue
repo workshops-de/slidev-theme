@@ -7,7 +7,7 @@
       <div class="section-ribbon"></div>
     </div>
 
-    <div class="section-surface silver-panel relative z-[1] flex-1 flex flex-col p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
+    <div class="section-surface silver-panel relative z-[1] flex-1 flex flex-col gap-y-6 p-[clamp(2.5rem,6vw,5rem)] rounded-[2.5rem] overflow-hidden border border-[var(--section-border-color)] text-left max-[768px]:rounded-[1.75rem] max-[768px]:p-8">
       <!-- Main Content Area -->
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
         <div class="copy max-w-3xl flex flex-col gap-8">
@@ -26,7 +26,7 @@
             <span class="eyebrow-copy">Little What</span>
           </div>
         </div>
-        <LittleWhatIllustration class="little-what-illustration w-52 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
+        <LittleWhatIllustration class="little-what-illustration w-40 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
       </div>
 
       <!-- Footer Logo -->
@@ -43,6 +43,12 @@ import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 </script>
 
 <style>
+/** h1 has same size as h2 just for easier editing */
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .little-what .section-content :where(h1, h2, p) {
   margin: 0;
   color: inherit;
