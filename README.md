@@ -33,12 +33,14 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 
 This theme provides the following layouts:
 
-| Layout        | Description                                                          |
-| ------------- | -------------------------------------------------------------------- |
-| `cover`       | Title slide with workshop title, subtitle, and optional body content |
-| `section`     | Section divider with decorative background and "New Topic" badge     |
-| `task`        | Task slide with orange theme and task illustration                   |
-| `little-what` | Explanation slide with silver theme and purpose text                 |
+| Layout        | Description                                                                                          |
+| ------------- | ---------------------------------------------------------------------------------------------------- |
+| `cover`       | Title slide with workshop title, subtitle, and optional body content. Features "Workshop" label and footer logo. |
+| `topic`       | Section divider with decorative blue-themed background, grid pattern, and "Topic" badge. Supports optional image placement (left or center). |
+| `task`        | Task slide with orange theme, "Task" badge, and task illustration. Used for presenting exercises or assignments. |
+| `little-what` | Explanation slide with silver theme, "Little What" badge, and light bulb illustration. Includes a dedicated explanation slot for purpose text. |
+| `why`         | Question/explanation slide with purple theme, "Why" badge, and why illustration. Used to explain reasons, motivations, or rationale. |
+| `what-if`     | Hypothetical question slide with red/wine theme and "What If" badge. Used for posing hypothetical scenarios or thought-provoking questions. |
 
 ## Components
 
