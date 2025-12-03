@@ -33,12 +33,12 @@ import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 </script>
 
 <style>
-.section-content :where(h1, h2, p) {
+.what-if .section-content :where(h1, h2, p) {
   margin: 0;
   color: inherit;
 }
 
-.section-content h1 {
+.what-if .section-content h1 {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
   text-transform: uppercase;
