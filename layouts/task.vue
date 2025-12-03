@@ -11,10 +11,7 @@
       <!-- Main Content Area -->
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
         <div class="flex flex-col gap-12 max-w-3xl">
-          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold self-start w-fit">
-            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[#fb923c]"></span>
-            <span class="eyebrow-copy">Task</span>
-          </div>
+          <SectionBadge text="Task" theme="orange" />
           <slot />
         </div>
         <TaskIllustration class="task-illustration w-50 h-auto drop-shadow-2xl max-[768px]:max-w-[220px]" />
@@ -29,6 +26,7 @@
 </template>
 
 <script setup lang="ts">
+import SectionBadge from '../components/SectionBadge.vue';
 import TaskIllustration from '../components/TaskIllustration.vue';
 import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 </script>
@@ -68,17 +66,5 @@ html.dark .task-next .section-surface::after {
   border-color: rgba(251, 146, 60, 0.35);
 }
 
-.task-next .section-eyebrow {
-  background: rgba(251, 146, 60, 0.14);
-  border-color: rgba(251, 146, 60, 0.3);
-}
-
-html.dark .task-next .section-eyebrow {
-  background: rgba(251, 146, 60, 0.2);
-  border-color: rgba(251, 146, 60, 0.35);
-}
-
-.task-next .section-eyebrow .brand-dot {
-  box-shadow: 0 0 12px rgba(251, 146, 60, 0.8);
-}
+/* Badge styles now handled by SectionBadge component */
 </style>

@@ -11,10 +11,7 @@
       <!-- Main Content Area -->
       <div class="section-content flex-1 flex items-center justify-center flex-row gap-12 max-[768px]:flex-col">
         <div class="copy max-w-3xl flex flex-col gap-8">
-          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold self-start w-fit">
-            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[#cdd4de]"></span>
-            <span class="eyebrow-copy">Little What</span>
-          </div>
+          <SectionBadge text="Little What" theme="silver" />
 
           <div class="heading-stack flex flex-col gap-4">
             <slot name="heading">
@@ -39,6 +36,7 @@
 
 <script setup lang="ts">
 import LittleWhatIllustration from '../components/LittleWhatIllustration.vue';
+import SectionBadge from '../components/SectionBadge.vue';
 import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 </script>
 
@@ -118,21 +116,7 @@ html.dark .little-what .silver-panel::after {
   border-color: rgba(198, 206, 223, 0.4);
 }
 
-.little-what .section-eyebrow {
-  background: rgba(255, 255, 255, 0.35);
-  border: 1px solid rgba(206, 214, 227, 0.6);
-  color: #4b4f58;
-}
-
-html.dark .little-what .section-eyebrow {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(198, 206, 223, 0.45);
-  color: #e2e5ef;
-}
-
-.little-what .section-eyebrow .brand-dot {
-  box-shadow: 0 0 14px rgba(224, 232, 245, 0.9);
-}
+/* Badge styles now handled by SectionBadge component */
 
 .little-what .section-content {
   color: #1d1f26;

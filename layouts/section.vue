@@ -19,10 +19,7 @@
         <TaskIllustration v-if="image === '/task.svg'" :class="imageClass" />
         <img v-else-if="image" :src="image" alt="" :class="imageClass" />
         <div class="flex flex-col">
-          <div class="section-eyebrow inline-flex items-center gap-2 px-[0.95rem] py-[0.4rem] rounded-full uppercase text-[0.78rem] tracking-[0.18em] font-semibold w-fit">
-            <span class="brand-dot w-[0.65rem] h-[0.65rem] rounded-full bg-[var(--slidev-theme-primary)]"></span>
-            <span class="eyebrow-copy">New Topic</span>
-          </div>
+          <SectionBadge text="New Topic" theme="blue" />
           <slot />
         </div>
       </div>
@@ -38,6 +35,7 @@
 <script setup lang="ts">
 import TaskIllustration from '../components/TaskIllustration.vue';
 import WorkshopsLogo from '../components/WorkshopsLogo.vue';
+import SectionBadge from '../components/SectionBadge.vue';
 
 defineProps<{
   image?: string
@@ -125,17 +123,5 @@ html.dark .section-grid {
     linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
 }
 
-.section-eyebrow {
-  background: rgba(66, 134, 244, 0.14);
-  border: 1px solid rgba(66, 134, 244, 0.3);
-}
-
-html.dark .section-eyebrow {
-  background: rgba(66, 134, 244, 0.2);
-  border-color: rgba(66, 134, 244, 0.35);
-}
-
-.section-eyebrow .brand-dot {
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
-}
+/* Badge styles now handled by SectionBadge component */
 </style>
