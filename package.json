@@ -1,5 +1,5 @@
 {
-  "name": "@workshops-de/slidev-theme",
+  "name": "@workshops.de/slidev-theme",
   "version": "1.0.1",
   "type": "module",
   "keywords": [
@@ -11,8 +11,8 @@
     "node": ">=18.0.0"
   },
   "scripts": {
+    "start": "slidev example.md --open",
     "build": "slidev build example.md",
-    "dev": "slidev example.md --open",
     "export": "slidev export example.md",
     "screenshot": "slidev export example.md --format png"
   },
