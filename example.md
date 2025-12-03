@@ -308,7 +308,13 @@ layout: task
 layout: section
 ---
 
-# Diagrams
+# Diagram
+
+<!-- My comment -->
+
+<!--
+M
+-->
 
 ---
 layout: default
