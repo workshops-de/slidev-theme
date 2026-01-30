@@ -28,6 +28,15 @@ Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 ---
 
+
+---
+
+# This is a title
+
+## this is a sub title
+
+---
+
 # Navigation
 
 Hover on the bottom-left corner to see the navigation's controls panel

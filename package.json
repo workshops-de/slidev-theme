@@ -17,19 +17,13 @@
     "screenshot": "slidev export example.md --format png"
   },
   "devDependencies": {
-    "@slidev/cli": "52.9.1",
-    "@slidev/types": "52.9.1",
-    "prettier": "3.6.2",
+    "@slidev/cli": "52.11.4",
+    "@slidev/types": "52.11.4",
+    "prettier": "3.8.1",
     "prettier-plugin-slidev": "1.0.5"
   },
   "//": "Learn more: https://sli.dev/guide/write-theme.html",
   "slidev": {
-    "colorSchema": "both",
-    "defaults": {
-      "fonts": {
-        "sans": "Nunito Sans",
-        "mono": "Fira Code"
-      }
-    }
+    "colorSchema": "both"
   }
 }
