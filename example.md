@@ -35,6 +35,17 @@ Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 ## this is a sub title
 
+This is normal Text. **This is bold text**. *This is italic text*.
+<span v-mark.underline.red>This is underlined text after click.</span>
+
+---
+layout: fact
+---
+
+# Little content
+
+Just an important statement.
+
 ---
 
 # Navigation
