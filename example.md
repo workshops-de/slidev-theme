@@ -68,6 +68,12 @@ layout: section
 # Code Snippets
 
 ---
+layout: sub-section
+---
+
+# Clean Code
+
+---
 layout: image-right
 image: https://cover.sli.dev
 ---
