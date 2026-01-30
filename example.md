@@ -62,7 +62,7 @@ Hover on the bottom-left corner to see the navigation's controls panel
 | <kbd>down</kbd>                                      | next slide                  |
 
 ---
-layout: topic
+layout: section
 ---
 
 # Code Snippets
@@ -294,15 +294,13 @@ export class MyModule {
 ```
 
 ---
-layout: topic
-image: /task.svg
-imageClass: w-42
+layout: section
 ---
 
 # Tasks
 
 ---
-layout: topic
+layout: section
 ---
 
 # Tasks
@@ -349,7 +347,7 @@ flowchart LR
 ```
 
 ---
-layout: topic
+layout: section
 ---
 
 # Learn More
