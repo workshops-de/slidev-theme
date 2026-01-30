@@ -324,6 +324,12 @@ layout: little-what
 This short primer tells the audience what the next topic is about.
 
 ---
+layout: little-what
+---
+
+This variant highlights a small sub-topic before diving deeper.
+
+---
 layout: task
 ---
 
