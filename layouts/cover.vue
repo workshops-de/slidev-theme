@@ -1,18 +1,24 @@
 <template>
-  <div class="slidev-layout cover flex flex-col min-h-full p-[clamp(2.5rem,6vw,4rem)]">
-      <div class="max-[900px]:max-w-full">
-        <p class="uppercase tracking-[0.2em] text-sm font-semibold text-[var(--slidev-theme-primary)] mb-2">Workshop</p>
-        <h1 class="text-[clamp(2.75rem,5vw,4rem)] font-bold mb-5 leading-[1.1] m-0">
-          <slot name="title" />
-        </h1>
-        <p class="text-[clamp(1.2rem,2.5vw,1.65rem)] text-[var(--slidev-theme-primary)] mb-6 font-medium">
-          <slot name="subtitle" />
-        </p>
-        <div class="cover-body">
-          <slot />
-        </div>
+  <SectionSurface class="cover" variant="blue">
+    <div class="w-full flex flex-col items-center justify-center text-center gap-6">
+      <div class="cover-logo">
+        <slot name="logo" />
       </div>
-
-    <SlideFooter />
-  </div>
+      <h1 class="m-0">
+        <slot name="title" />
+      </h1>
+      <p class="m-0">
+        <slot name="subtitle" />
+      </p>
+      <WorkshopsLogo class="h-6 w-auto" />
+      <div class="cover-body">
+        <slot />
+      </div>
+    </div>
+  </SectionSurface>
 </template>
+
+<script setup lang="ts">
+import SectionSurface from '../components/SectionSurface.vue';
+import WorkshopsLogo from '../components/WorkshopsLogo.vue';
+</script>
