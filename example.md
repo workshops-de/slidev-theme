@@ -39,7 +39,7 @@ This is normal Text. **This is bold text**. *This is italic text*.
 <span v-mark.underline.red>This is underlined text after click.</span>
 
 ---
-layout: fact
+layout: little-what
 ---
 
 # Little content

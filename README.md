@@ -31,27 +31,48 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 
 ## Layouts
 
-This theme provides the following layouts:
+This theme provides and overrides the following layouts:
 
-| Layout        | Description                                                                                                                                    |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `cover`       | Title slide with workshop title, subtitle, and optional body content. Features "Workshop" label and footer logo.                               |
-| `topic`       | Section divider with decorative blue-themed background, grid pattern, and "Topic" badge. Supports optional image placement (left or center).   |
-| `task`        | Task slide with orange theme, "Task" badge, and task illustration. Used for presenting exercises or assignments.                               |
-| `little-what` | Explanation slide with silver theme, "Little What" badge, and light bulb illustration. Includes a dedicated explanation slot for purpose text. |
-| `why`         | Question/explanation slide with purple theme, "Why" badge, and why illustration. Used to explain reasons, motivations, or rationale.           |
-| `what-if`     | Hypothetical question slide with red/wine theme and "What If" badge. Used for posing hypothetical scenarios or thought-provoking questions.    |
+| Layout            | Description                                                                 |
+| ----------------- | --------------------------------------------------------------------------- |
+| `cover`           | Title slide with tech logo slot, centered title/subtitle, and logo footer.  |
+| `section`         | Section divider with "Section" badge and centered content.                  |
+| `sub-section`     | Section divider with left accent border for nested sections.                |
+| `task`            | Task slide with orange "Task" badge and left-aligned content.               |
+| `little-what`     | Short primer slide with silver badge and left-aligned content.              |
+| `why`             | Rationale slide with purple badge and left-aligned content.                 |
+| `what-if`         | Hypothetical slide with red badge and left-aligned content.                 |
+| `ask-me-anything` | Centered big prompt for open Q&A.                                           |
+| `default`         | Overrides Slidev default layout to use the theme surface.                   |
+| `two-cols`        | Overrides Slidev two-column layout to use the theme surface.                |
+| `two-cols-header` | Overrides two-column-header layout to use the theme surface.                |
+| `image-left`      | Overrides image-left layout to use the theme surface on the text side.      |
+| `image-right`     | Overrides image-right layout to use the theme surface on the text side.     |
+| `end`             | Overrides end layout with the theme surface and centered "END" text.        |
+
+### Layout usage
+
+All layouts share a unified surface component (`SectionSurface`) and color variants matching `SectionBadge`. The default variant is blue.
+
+Example:
+
+<pre><code>---
+layout: section
+---
+
+# Title
+</code></pre>
 
 ## Components
 
 This theme provides the following components:
 
-| Component                | Description                                  |
-| ------------------------ | -------------------------------------------- |
-| `TaskIllustration`       | SVG illustration of a task board with pencil |
-| `LittleWhatIllustration` | SVG illustration of a silver light bulb      |
-| `SlideFooter`            | Footer component with workshops.de logo      |
-| `WorkshopsLogo`          | SVG component for the workshops.de logo      |
+| Component        | Description                                           |
+| ---------------- | ----------------------------------------------------- |
+| `SectionSurface` | Base surface used by all layouts, with color variants |
+| `SectionBadge`   | Badge with matching color variants                    |
+| `SlideFooter`    | Footer component with workshops.de logo               |
+| `WorkshopsLogo`  | SVG component for the workshops.de logo               |
 
 ## Contributing
 

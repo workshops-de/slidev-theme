@@ -21,9 +21,3 @@ import WorkshopsLogo from '../components/WorkshopsLogo.vue';
 
 defineOptions({ name: 'LittleWhatLayout' })
 </script>
-
-<style>
-.little-what .section-content :where(h1, h2, p) {
-  @apply m-0 text-inherit;
-}
-</style>
