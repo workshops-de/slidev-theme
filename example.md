@@ -330,6 +330,12 @@ layout: little-what
 This variant highlights a small sub-topic before diving deeper.
 
 ---
+layout: ask-me-anything
+---
+
+Ask me anything
+
+---
 layout: task
 ---
 
