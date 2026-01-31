@@ -23,7 +23,7 @@ const style = computed(() => {
 
 <template>
   <div class="grid grid-cols-2 w-full h-full auto-rows-fr">
-    <SectionSurface class="image-right" variant="silver">
+    <SectionSurface class="image-right" align="top" variant="silver">
       <div class="w-full h-full" :class="props.class">
         <slot />
       </div>

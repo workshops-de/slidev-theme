@@ -1,5 +1,5 @@
 <template>
-  <SectionSurface class="default" variant="silver">
+  <SectionSurface class="default" align="top" variant="silver">
     <div class="w-full">
       <slot />
     </div>

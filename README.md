@@ -71,6 +71,7 @@ This theme provides the following components:
 | ---------------- | ----------------------------------------------------- |
 | `SectionSurface` | Base surface used by all layouts, with color variants |
 | `SectionBadge`   | Badge with matching color variants                    |
+| `Callout`        | Callout box with info/tip/important/warning/caution   |
 | `SlideFooter`    | Footer component with workshops.de logo               |
 | `WorkshopsLogo`  | SVG component for the workshops.de logo               |
 

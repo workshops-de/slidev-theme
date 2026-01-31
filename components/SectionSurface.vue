@@ -5,7 +5,7 @@
       :class="variantClass"
     >
       <slot name="header" />
-      <div class="section-content flex-1 flex items-center justify-center">
+      <div class="section-content flex-1 flex justify-center" :class="alignClass">
         <slot />
       </div>
       <slot name="footer" />
@@ -18,11 +18,14 @@ import { computed } from 'vue';
 
 const props = withDefaults(defineProps<{
   variant?: 'red' | 'orange' | 'silver' | 'blue' | 'purple'
+  align?: 'center' | 'top'
 }>(), {
   variant: 'blue',
+  align: 'center',
 })
 
 const variantClass = computed(() => `surface-${props.variant}`)
+const alignClass = computed(() => (props.align === 'top' ? 'items-start' : 'items-center'))
 
 defineOptions({ name: 'SectionSurface' })
 </script>

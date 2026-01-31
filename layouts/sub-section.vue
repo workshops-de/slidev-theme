@@ -21,7 +21,7 @@ defineOptions({ name: 'SubSectionLayout' })
 </script>
 
 <style>
-.sub-section :deep(.section-surface) {
+.sub-section .section-surface {
   border-left-width: 4px;
   margin-left: clamp(0.5rem, 1vw, 1.5rem);
 }

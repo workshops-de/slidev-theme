@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <SectionSurface class="two-cols-header" variant="silver">
+  <SectionSurface class="two-cols-header" align="top" variant="silver">
     <div class="two-cols-header-grid w-full h-full" :class="props.layoutClass">
       <div class="col-header">
         <slot />

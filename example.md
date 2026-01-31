@@ -1,6 +1,8 @@
 ---
 theme: ./
 layout: cover
+logo: example.png
+twoslash: true
 ---
 
 # Slidev Theme Starter
@@ -28,14 +30,11 @@ Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 ---
 
-
----
-
 # This is a title
 
 ## this is a sub title
 
-This is normal Text. **This is bold text**. *This is italic text*.
+This is normal Text. **This is bold text**. _This is italic text_.
 <span v-mark.underline.red>This is underlined text after click.</span>
 
 ---
@@ -60,6 +59,21 @@ Hover on the bottom-left corner to see the navigation's controls panel
 | <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd>   | previous animation or slide |
 | <kbd>up</kbd>                                        | previous slide              |
 | <kbd>down</kbd>                                      | next slide                  |
+
+---
+layout: default
+---
+
+# Callouts
+
+<Callout type="info">
+  Useful <strong>information</strong> that users should know, even when skimming content.
+</Callout>
+
+<Callout type="tip">Helpful advice for doing things better or more easily.</Callout>
+<Callout type="important">Key information users need to know to achieve their goal.</Callout>
+<Callout type="warning">Urgent info that needs immediate user attention to avoid problems.</Callout>
+<Callout type="caution">Advises about risks or negative outcomes of certain actions.</Callout>
 
 ---
 layout: section
@@ -98,13 +112,10 @@ function updateUser(id: number, update: Partial<User>) {
 ```
 
 ---
-layout: default
-layoutClass: gap-x-sm
----
 
 # Code
 
-```typescript
+```ts
 export class MyModule {
   myState: unknown;
 }
