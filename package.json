@@ -1,6 +1,6 @@
 {
   "name": "@workshops.de/slidev-theme",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Slidev theme for workshops.de trainings",
   "repository": {
     "type": "git",
@@ -20,6 +20,9 @@
     "build": "slidev build example.md",
     "export": "slidev export example.md",
     "screenshot": "slidev export example.md --format png"
+  },
+  "dependencies": {
+    "@shikijs/transformers": "^4.6.0"
   },
   "devDependencies": {
     "@slidev/cli": "52.11.4",

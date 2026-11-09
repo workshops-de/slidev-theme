@@ -1,3 +1,6 @@
 // inherit from base layouts, remove it to get full customizations
 import "@slidev/client/styles/layouts-base.css";
 import "./vars.css";
+import "./inline-code.css";
+import "./shiki-transformers.css";
+import "./twoslash-fix.css";

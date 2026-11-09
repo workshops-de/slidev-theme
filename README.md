@@ -79,9 +79,19 @@ This theme provides the following components:
 
 The theme ships Slidev setup files that apply to every deck using it:
 
-| File               | Effect                                   |
-| ------------------ | ---------------------------------------- |
-| `setup/mermaid.ts` | Mermaid diagrams use the `neutral` theme |
+| File                 | Effect                                                                                           |
+| -------------------- | ------------------------------------------------------------------------------------------------ |
+| `setup/mermaid.ts`   | Mermaid diagrams use the `neutral` theme                                                         |
+| `setup/shiki.ts`     | Code colours `material-theme-ocean` (dark) / `light-plus` (light) and the Shiki notation markers |
+| `setup/shortcuts.ts` | Disables space (next slide) and `d` (dark mode), which clash with tldraw; use the arrow keys     |
+
+Code block markers (comments in the code, styled by `styles/shiki-transformers.css`):
+`// [!code highlight]`, `// [!code word:name]`, `// [!code ++]`, `// [!code --]`, `// [!code focus]`,
+`// [!code error]`, `// [!code warning]`. Twoslash type hovers are built into Slidev: add `twoslash`
+after the language (```` ```ts twoslash ````).
+
+The theme also improves the contrast of `inline code` and keeps Twoslash popovers visible on large
+screens.
 
 Setup files in a deck's own folder still apply on top of these.
 
