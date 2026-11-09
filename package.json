@@ -1,6 +1,11 @@
 {
   "name": "@workshops.de/slidev-theme",
-  "version": "2.1.0",
+  "version": "2.2.0",
+  "description": "Slidev theme for workshops.de trainings",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/workshops-de/slidev-theme.git"
+  },
   "type": "module",
   "keywords": [
     "slidev-theme",

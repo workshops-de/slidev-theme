@@ -75,6 +75,21 @@ This theme provides the following components:
 | `SlideFooter`    | Footer component with workshops.de logo               |
 | `WorkshopsLogo`  | SVG component for the workshops.de logo               |
 
+## Setup
+
+The theme ships Slidev setup files that apply to every deck using it:
+
+| File               | Effect                                   |
+| ------------------ | ---------------------------------------- |
+| `setup/mermaid.ts` | Mermaid diagrams use the `neutral` theme |
+
+Setup files in a deck's own folder still apply on top of these.
+
+## Releasing
+
+Bump `version` in `package.json` and push to `main`. The release workflow publishes to npm via
+trusted publishing (OIDC, no token) and tags the release.
+
 ## Contributing
 
 - `npm install`
